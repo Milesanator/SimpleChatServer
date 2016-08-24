@@ -7,6 +7,8 @@ app.get('/', function(req, res){
   res.render('index', {});
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 module.exports = app;
 
 io.on('connection', function(socket){
@@ -21,4 +23,3 @@ io.on('connection', function(socket){
 http.listen(3000, function(){
   console.log('listening on *:3000');
 });
-
