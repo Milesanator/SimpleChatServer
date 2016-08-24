@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Chat Server</title>
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+    <style type="text/css">
+    #messages, form {
+    display: none;
+    }
+    </style>
+</head>
+<body>
+<ul id="messages"></ul>
+<form id="message-form" action="">
+    <input id="m" autocomplete="off">
+    <button id="submit">Send</button>
+</form>
+<script src="../routes/index.js"></script>
+<script src="../node_modules/socket.io-client/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="../public/javascripts/socket.js"></script>
+<div id="mocha"></div>
+<script src="../node_modules/mocha/mocha.js"></script>
+<script src="../node_modules/chai/chai.js"></script>
+<script>
+    mocha.ui('bdd');
+    mocha.reporter('html');
+    var expect = chai.expect;
+</script>
+<script src="./test-index.js"></script>
+<script>mocha.run();</script>
+</body>
+</html>

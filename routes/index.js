@@ -1,8 +1,8 @@
-var express = require('express');
-var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-var path = require('path');
+var express = require('express'),
+   app = express(),
+   http = require('http').Server(app),
+   io = require('socket.io')(http),
+   path = require('path');
 
 app.get('/', function(req, res){
   res.render('index', {});

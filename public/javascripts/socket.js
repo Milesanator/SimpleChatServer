@@ -1,6 +1,3 @@
-/**
- * Created by miles on 24/08/16.
- */
 var socket = io();
 // emit message to socket
 $('form').submit(function () {
