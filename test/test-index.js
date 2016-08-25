@@ -1,13 +1,7 @@
-var io = require('socket.io').listen(5000);
-
-io.sockets.on('connection', function (socket) {
-
-});
-
 var should = require('should');
 var io = require('socket.io-client');
 
-var socketURL = 'http://0.0.0.0:5000';
+var socketURL = 'http://0.0.0.0:3000';
 
 var options ={
     transports: ['websocket'],
@@ -49,14 +43,3 @@ describe("Chat Server",function(){
         });
     });
 });
-
-// describe('server', function() {
-//     it('should send messages', function(){
-//
-//     });
-//     it('should receive sent messages(without refresh)', function(){
-//         $('#m').val("Test post");
-//         $('form#message-form').submit();
-//         expect($('#messages li').last().length).to.be.equal("Test post");
-//     });
-// });
