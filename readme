@@ -1,0 +1,6 @@
+Chat Server:
+  most simple usage executing as a Webstorm project.
+Testing:
+  To run tests from Terminal cd to test then execute the following command:
+    mocha test-index
+    
